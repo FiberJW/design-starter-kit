@@ -23,25 +23,25 @@
 
 ## Getting Started
 
-1. Make sure that your have [`expo-cli`](https://docs.expo.io/versions/latest/workflow/expo-cli/) installed.
+1. Make sure that you have [`expo-cli`](https://docs.expo.io/versions/latest/workflow/expo-cli/) installed.
 
 1. F\*\*k this repo with the button near the top right of this GitHub page. Oh, and while you're up there, you might as well click the star button too 😉.
 
 1. Clone your fork, `cd` into it, and `yarn` to install your Expo and React Router dependencies.
 
-1. Run `expo start --web --dev` in your project folder and get coding!
+1. Run `expo start --web --dev` in your project folder and get designing!
 
 ## Deploying
 
-Follow [Expo's guides for distribution](https://docs.expo.io/versions/v35.0.0/distribution/introduction/) to get your prototype on phones or on the web.
+Follow [Expo's guides for distribution](https://docs.expo.io/versions/v35.0.0/distribution/introduction/) to get your prototype on other people's devices.
 
 ## Navigation
 
-Use the modules exported from `'./navigation.ts'` to ensure that your routes will work across web and native. Also, opt to use the `useHistory` hook over the `Link` API as the `Link` API differs across web and native.
+Use the modules exported from `'./navigation.ts'` to ensure that your routes will work across web and native. Also, opt to use the `useHistory` hook over the `Link` API as the `Link` component works differently across web and native.
 
 ## Typography
 
-The typeface selected for this starter kit is [Inter](https://rsms.me/inter/). There are pre-configured type scale functions in `'./styles/typography.ts'`, I also made a cross-platform `rem` converter for consistent sizing values across platforms.
+The typeface selected for this starter kit is [Inter](https://rsms.me/inter/). There are pre-configured type scale functions in `'./styles/typography.ts'`. I made a cross-platform `rem` converter that's also in that file for consistent sizing values across platforms.
 
 ## Colors
 
