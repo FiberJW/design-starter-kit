@@ -1,5 +1,4 @@
-import { Platform, TextStyle } from "react-native";
-import { black } from "./colors";
+import { Platform } from 'react-native';
 
 export function rem(multiple) {
   const baseFontSize = 16;

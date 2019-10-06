@@ -1,8 +1,8 @@
-import React from "react";
-import { View, StyleSheet, Text, Button, TouchableOpacity } from "react-native";
-import { rem, majorThird } from "../styles/typography";
-import { useHistory } from "../navigation";
-import { white, black } from "../styles/colors";
+import React from 'react';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { rem, majorThird } from '../styles/typography';
+import { useHistory } from '../navigation';
+import { white, black } from '../styles/colors';
 
 export default function Error404() {
   const history = useHistory();
@@ -11,10 +11,9 @@ export default function Error404() {
     <View style={rootStyles.container}>
       <Text style={rootStyles.text}>404</Text>
       <TouchableOpacity
-        onPress={() => history.replace("/")}
+        onPress={() => history.replace('/')}
         style={rootStyles.linkContainer}
-        activeOpacity={0.8}
-      >
+        activeOpacity={0.8}>
         <Text style={rootStyles.linkText}>Return to Index</Text>
       </TouchableOpacity>
     </View>
@@ -24,12 +23,12 @@ export default function Error404() {
 const rootStyles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   text: {
     fontSize: majorThird(5),
-    fontFamily: "Inter SemiBold",
+    fontFamily: 'Inter SemiBold',
     marginBottom: rem(3),
   },
   linkContainer: {
@@ -39,7 +38,7 @@ const rootStyles = StyleSheet.create({
   },
   linkText: {
     fontSize: majorThird(1),
-    fontFamily: "Inter Medium",
+    fontFamily: 'Inter Medium',
     color: white(),
   },
 });
