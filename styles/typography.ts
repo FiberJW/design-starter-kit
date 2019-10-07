@@ -32,7 +32,7 @@ export const goldenRatio = genTypeScale(1.618);
 
 export function lineHeight(multiple: number, fontSize: fontSize) {
   return {
-    web: `${multiple}`,
+    web: `'${multiple}'`,
     macos: multiple * fontSize,
     windows: multiple * fontSize,
     ios: multiple * fontSize,

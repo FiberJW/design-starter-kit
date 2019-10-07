@@ -1,44 +1,49 @@
 import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import styled from 'styled-components/native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { rem, majorThird } from '../styles/typography';
 import { useHistory } from '../navigation';
 import { white, black } from '../styles/colors';
+
+const Container = styled(View)`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ErrorCode = styled(Text)`
+  font-family: 'Inter Semibold';
+  font-size: ${majorThird(5)};
+  margin-bottom: ${rem(3)};
+`;
+
+function Button({ label, onPress, style }) {
+  return (
+    <ButtonTouchable activeOpacity={0.8} onPress={onPress} style={style}>
+      <ButtonText>{label}</ButtonText>
+    </ButtonTouchable>
+  );
+}
+
+const ButtonTouchable = styled(TouchableOpacity)`
+  padding: ${rem(1)};
+  border-radius: ${rem(0.5)};
+  background-color: ${black()};
+`;
+
+const ButtonText = styled(Text)`
+  font-size: ${majorThird(1)};
+  font-family: 'Inter Medium';
+  color: ${white()};
+`;
 
 export default function Error404() {
   const history = useHistory();
 
   return (
-    <View style={rootStyles.container}>
-      <Text style={rootStyles.text}>404</Text>
-      <TouchableOpacity
-        onPress={() => history.replace('/')}
-        style={rootStyles.linkContainer}
-        activeOpacity={0.8}>
-        <Text style={rootStyles.linkText}>Return to Index</Text>
-      </TouchableOpacity>
-    </View>
+    <Container>
+      <ErrorCode>404</ErrorCode>
+      <Button onPress={() => history.replace('/')} label="Return to Index" activeOpacity={0.8} />
+    </Container>
   );
 }
-
-const rootStyles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: majorThird(5),
-    fontFamily: 'Inter SemiBold',
-    marginBottom: rem(3),
-  },
-  linkContainer: {
-    padding: rem(1),
-    borderRadius: rem(0.5),
-    backgroundColor: black(),
-  },
-  linkText: {
-    fontSize: majorThird(1),
-    fontFamily: 'Inter Medium',
-    color: white(),
-  },
-});
