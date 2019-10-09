@@ -1,23 +1,17 @@
-import { Platform } from 'react-native';
-
-export function rem(multiple) {
-  const baseFontSize = 16;
-
-  return {
-    web: `${multiple}rem`,
-    macos: multiple * baseFontSize,
-    windows: multiple * baseFontSize,
-    ios: multiple * baseFontSize,
-    android: multiple * baseFontSize,
-  }[Platform.OS];
+export function fi(multiple) {
+  return multiple * 16;
 }
 
-export type fontSize = string | number;
+export function lineHeight(fontSize: number, multiple: number = 1.2) {
+  return fontSize * multiple;
+}
+
+export type fontSize = number;
 export type typeScale = (number) => fontSize;
 
 export function genTypeScale(ratio: number): typeScale {
   return function typeScale(note: number) {
-    return rem(1 * Math.pow(ratio, note));
+    return fi(1 * Math.pow(ratio, note));
   };
 }
 
@@ -29,13 +23,3 @@ export const perfectFourth = genTypeScale(1.333);
 export const augmentedFourth = genTypeScale(1.414);
 export const perfectFifth = genTypeScale(1.5);
 export const goldenRatio = genTypeScale(1.618);
-
-export function lineHeight(multiple: number, fontSize: fontSize) {
-  return {
-    web: `'${multiple}'`,
-    macos: multiple * fontSize,
-    windows: multiple * fontSize,
-    ios: multiple * fontSize,
-    android: multiple * fontSize,
-  }[Platform.OS];
-}

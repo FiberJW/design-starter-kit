@@ -42,7 +42,7 @@ Use the modules exported from `'./navigation.ts'` to ensure that your routes wil
 
 ## Typography
 
-The typeface selected for this starter kit is [Inter](https://rsms.me/inter/). There are pre-configured type scale functions in `'./styles/typography.ts'`. I made a cross-platform `rem` converter that's also in that file for consistent sizing values across platforms.
+The typeface selected for this starter kit is [Inter](https://rsms.me/inter/).
 
 ## Colors
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { rem, majorThird } from '../styles/typography';
+import { fi, majorThird } from '../styles/typography';
 import { useHistory } from '../navigation';
 import { white, black } from '../styles/colors';
 
@@ -13,8 +13,8 @@ const Container = styled(View)`
 
 const ErrorCode = styled(Text)`
   font-family: 'Inter Semibold';
-  font-size: ${majorThird(5)};
-  margin-bottom: ${rem(3)};
+  font-size: ${majorThird(5)}px;
+  margin-bottom: ${fi(3)}px;
 `;
 
 function Button({ label, onPress, style }) {
@@ -26,13 +26,13 @@ function Button({ label, onPress, style }) {
 }
 
 const ButtonTouchable = styled(TouchableOpacity)`
-  padding: ${rem(1)};
-  border-radius: ${rem(0.5)};
+  padding: ${fi(1)}px;
+  border-radius: ${fi(0.5)}px;
   background-color: ${black()};
 `;
 
 const ButtonText = styled(Text)`
-  font-size: ${majorThird(1)};
+  font-size: ${majorThird(1)}px;
   font-family: 'Inter Medium';
   color: ${white()};
 `;
