@@ -7,7 +7,7 @@
 </h3>
 
 <p align="center">
-  A multi-platform design+prototyping setup powered by  <a href="https://expo.io">Expo</a> 🥤
+  A universal prototyping setup powered by <a href="https://expo.io">Expo</a> 🥤
 </p>
 
 ---
