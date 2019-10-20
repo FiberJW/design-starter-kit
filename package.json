@@ -10,6 +10,9 @@
   "dependencies": {
     "expo": "^35.0.0",
     "expo-font": "~7.0.0",
+    "mobx": "^5.14.2",
+    "mobx-react-lite": "^1.5.0",
+    "mobx-state-tree": "^3.14.1",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",

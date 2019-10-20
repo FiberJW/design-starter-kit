@@ -1,20 +1,23 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { observer } from 'mobx-react-lite';
 import { fi, lineHeight, majorThird } from '../styles/typography';
-import { black, canvasWhite, white } from '../styles/colors';
+import { black, canvasWhite } from '../styles/colors';
+import Header from '../components/Header';
+import { useStore as useStringsStore } from '../stores/stringsStore';
 
-export default function IndexScreen() {
+export default observer(function IndexScreen() {
+  const { strings } = useStringsStore();
+
   return (
     <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.headerText}>🥤Design Starter Kit</Text>
-      </View>
+      <Header label={strings.get('headerText')} />
       <Text style={styles.instructions}>
         Open up screens/Index.tsx to start working on your app!
       </Text>
     </View>
   );
-}
+});
 
 const styles = StyleSheet.create({
   container: {
@@ -23,25 +26,6 @@ const styles = StyleSheet.create({
     flex: 1,
     height: '100%',
     justifyContent: 'center',
-  },
-  headerContainer: {
-    alignItems: 'center',
-    backgroundColor: white(),
-    borderBottomColor: black(10),
-    borderBottomWidth: 0.5,
-    flexDirection: 'row',
-    left: 0,
-    padding: fi(1),
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    width: '100%',
-  },
-  headerText: {
-    color: black(),
-    fontFamily: 'Inter Bold',
-    fontSize: majorThird(1),
-    textAlign: 'center',
   },
   instructions: {
     color: black(),

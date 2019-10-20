@@ -3,6 +3,7 @@ import * as Font from 'expo-font';
 import { Router, Route, Switch } from './navigation';
 import IndexScreen from './screens/Index';
 import Error404 from './screens/404';
+import { StoreProvider as StringsStoreProvider } from './stores/stringsStore';
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -33,15 +34,17 @@ export default function App() {
   }, []);
 
   return fontsLoaded ? (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <IndexScreen />
-        </Route>
-        <Route>
-          <Error404 />
-        </Route>
-      </Switch>
-    </Router>
+    <StringsStoreProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <IndexScreen />
+          </Route>
+          <Route>
+            <Error404 />
+          </Route>
+        </Switch>
+      </Router>
+    </StringsStoreProvider>
   ) : null;
 }
