@@ -1,10 +1,18 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ViewStyle } from 'react-native';
 import { fi, majorThird } from '../styles/typography';
 import { useHistory } from '../navigation';
 import { white, black } from '../styles/colors';
 
-function Button({ label, onPress, style }) {
+function Button({
+  label,
+  onPress,
+  style,
+}: {
+  label: string;
+  onPress: () => void;
+  style?: ViewStyle;
+}) {
   return (
     <TouchableOpacity activeOpacity={0.8} onPress={onPress} style={[styles.buttonTouchable, style]}>
       <Text style={styles.buttonText}>{label}</Text>
@@ -18,7 +26,7 @@ export default function Error404() {
   return (
     <View style={styles.container}>
       <Text style={styles.errorCode}>404</Text>
-      <Button onPress={() => history.replace('/')} label="Return to Index" activeOpacity={0.8} />
+      <Button onPress={() => history.replace('/')} label="Return to Index" />
     </View>
   );
 }

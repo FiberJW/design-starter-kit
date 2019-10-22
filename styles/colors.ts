@@ -1,6 +1,6 @@
-export type colorOpacityFunction = (number) => string;
+export type colorOpacityFunction = (opacity?: number) => string;
 
-export function hsla(hue, saturation, lightness, alpha = 1) {
+export function hsla(hue: number, saturation: number, lightness: number, alpha: number = 1) {
   return `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha})`;
 }
 

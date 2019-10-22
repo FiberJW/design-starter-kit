@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
 import { types } from 'mobx-state-tree';
 
 const StoreT = types.model('StringsStore', {
@@ -13,8 +13,8 @@ const store = StoreT.create({
 
 const StoreContext = createContext(store);
 
-export const StoreProvider = props => {
-  return <StoreContext.Provider value={store} {...props} />;
+export const StoreProvider = ({ children }: { children: ReactNode }) => {
+  return <StoreContext.Provider value={store}>{children}</StoreContext.Provider>;
 };
 
 export const useStore = () => {

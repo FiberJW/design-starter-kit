@@ -1,4 +1,4 @@
-export function fi(multiple) {
+export function fi(multiple: number) {
   return multiple * 16;
 }
 
@@ -7,7 +7,7 @@ export function lineHeight(fontSize: number, multiple: number = 1.2) {
 }
 
 export type fontSize = number;
-export type typeScale = (number) => fontSize;
+export type typeScale = (note: number) => fontSize;
 
 export function genTypeScale(ratio: number): typeScale {
   return function typeScale(note: number) {
