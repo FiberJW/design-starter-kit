@@ -1,4 +1,4 @@
-export function fi(multiple: number) {
+export function rem(multiple: number) {
   return multiple * 16;
 }
 
@@ -11,7 +11,7 @@ export type typeScale = (note: number) => fontSize;
 
 export function genTypeScale(ratio: number): typeScale {
   return function typeScale(note: number) {
-    return fi(1 * Math.pow(ratio, note));
+    return rem(1 * Math.pow(ratio, note));
   };
 }
 

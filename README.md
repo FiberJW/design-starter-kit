@@ -35,17 +35,9 @@
 
 Follow [Expo's guides for distribution](https://docs.expo.io/versions/v35.0.0/distribution/introduction/) to get your prototype on other people's devices.
 
-## Navigation
-
-Use the modules exported from `'./navigation.ts'` to ensure that your routes will work across web and native. Also, opt to use the `useHistory` hook over the `Link` API as the `Link` component works differently across web and native.
-
 ## Typography
 
 The typeface selected for this starter kit is [Inter](https://rsms.me/inter/).
-
-## Colors
-
-I think HSL is dope, so I keep my colors in `hsla()` form in `'./styles/colors.ts'`.
 
 ## Inspiration
 
