@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Design Starter Kit artworj" src="./design-starter-kit-artwork.png">
+  <img alt="Design Starter Kit artwork" src="./design-starter-kit-artwork.png">
 </p>
 
 <h3 align="center" style="font-weight:600">
