@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { lineHeight, majorThird } from '../styles/typography';
 import { black, canvasWhite } from '../styles/colors';
-import Header from '../components/Header';
+import { Header } from '../components/Header';
 
-export default function HomeScreen() {
+export function HomeScreen() {
   return (
     <View style={styles.container}>
       <Header label="🥤Design Starter Kit" />

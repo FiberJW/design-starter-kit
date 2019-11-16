@@ -1,5 +1,5 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "App.tsx",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -34,7 +34,10 @@
     "extends": [
       "universe/native",
       "plugin:react-native/all"
-    ]
+    ],
+    "rules": {
+      "import/no-default-export": "error"
+    }
   },
   "private": true
 }

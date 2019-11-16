@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import * as Font from 'expo-font';
-import HomeScreen from './screens/Home';
+import { registerRootComponent } from 'expo';
+import { activateKeepAwake } from 'expo-keep-awake';
+import { HomeScreen } from './screens/Home';
 
-export default function App() {
+function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   useEffect(() => {
@@ -32,3 +34,9 @@ export default function App() {
 
   return fontsLoaded ? <HomeScreen /> : null;
 }
+
+if (__DEV__) {
+  activateKeepAwake();
+}
+
+registerRootComponent(App);

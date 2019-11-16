@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { majorThird } from '../styles/typography';
 import { black, white } from '../styles/colors';
 
-export default function Header({ label }: { label: string }) {
+export function Header({ label }: { label: string }) {
   return (
     <View style={styles.headerContainer}>
       <Text style={styles.headerText}>{label}</Text>
