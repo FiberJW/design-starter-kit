@@ -1,9 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
+import * as Stylehooks from 'react-native-stylehooks';
 import { majorThird } from '../styles/typography';
 import { black, white } from '../styles/colors';
 
 export function Header({ label }: { label: string }) {
+  const styles = useStyles();
+
   return (
     <View style={styles.headerContainer}>
       <Text style={styles.headerText}>{label}</Text>
@@ -11,10 +14,10 @@ export function Header({ label }: { label: string }) {
   );
 }
 
-const styles = StyleSheet.create({
-  headerContainer: {
+const useStyles = Stylehooks.create({
+  headerContainer: ({ window: { width } }) => ({
     alignItems: 'center',
-    backgroundColor: white,
+    backgroundColor: width <= 1024 ? black : white,
     flexDirection: 'row',
     left: 0,
     padding: 16,
@@ -26,11 +29,11 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     top: 0,
     width: '100%',
-  },
-  headerText: {
-    color: black,
+  }),
+  headerText: ({ window: { width } }) => ({
+    color: width <= 1024 ? white : black,
     fontFamily: 'Inter Bold',
     fontSize: majorThird(1),
     textAlign: 'center',
-  },
+  }),
 });
