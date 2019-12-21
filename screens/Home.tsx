@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { lineHeight, majorThird } from '../styles/typography';
-import { black, canvasWhite } from '../styles/colors';
-import { Header } from '../components/Header';
+import { lineHeight, majorThird } from '~/styles/typography';
+import { black, canvasWhite } from '~/styles/colors';
+import { Header } from '~/components/Header';
 
 export function HomeScreen() {
   return (

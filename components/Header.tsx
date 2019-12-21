@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import * as Stylehooks from 'react-native-stylehooks';
-import { majorThird } from '../styles/typography';
-import { black, white } from '../styles/colors';
+import { majorThird } from '~/styles/typography';
+import { black, white } from '~/styles/colors';
 
 export function Header({ label }: { label: string }) {
   const styles = useStyles();
